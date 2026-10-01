@@ -1,0 +1,32 @@
+# =========================
+# Node / React
+# =========================
+Client/node_modules/
+Client/dist/
+*.log
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Spring Boot
+# =========================
+Server/target/
+Server/src/main/resources/application.properties
+
+# =========================
+# IDE
+# =========================
+.idea/
+.vscode/
+*.iml
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db

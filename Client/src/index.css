@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5b4ce6;
+  --color-primary-dark: #4738c9;
+  --color-primary-light: #eeecff;
+  --color-ink: #161827;
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Manrope", sans-serif;
+  --animate-loader-bounce: loader-bounce 1s infinite ease-in-out;
+  --animate-soft-pulse: soft-pulse 1.4s infinite;
+}
+
+@keyframes loader-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: .45; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+@keyframes soft-pulse { 50% { opacity: .52; } }
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    min-width: 320px;
+    background: #fff;
+    color: var(--color-ink);
+    font-family: "DM Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  button, input, textarea, select { font: inherit; }
+  button:disabled { cursor: not-allowed; opacity: .65; }
+  ::selection { background: rgba(91,76,230,.18); color: var(--color-ink); }
+}
+
+/* Third-party / generated HTML that cannot take utility classes */
+.rich-text { color: #555b6e; font-size: 16px; line-height: 1.9; }
+.rich-text h1, .rich-text h2, .rich-text h3 { color: #1d2030; font-family: Manrope, sans-serif; line-height: 1.25; letter-spacing: -.03em; }
+.rich-text h1 { margin: 42px 0 18px; font-size: 34px; }
+.rich-text h2 { margin: 36px 0 14px; font-size: 27px; }
+.rich-text h3 { margin: 30px 0 12px; font-size: 21px; }
+.rich-text p { margin: 0 0 19px; }
+.rich-text strong { color: #292d3e; }
+.rich-text a { color: var(--color-primary); text-decoration: underline; }
+.rich-text ul, .rich-text ol { padding-left: 25px; margin: 0 0 20px; }
+.rich-text li { margin-bottom: 8px; }
+.rich-text blockquote { margin: 26px 0; padding: 18px 22px; border-left: 3px solid var(--color-primary); border-radius: 0 10px 10px 0; background: #f6f5ff; color: #666a7c; }
+.rich-text img { margin: 25px auto; border-radius: 15px; }
+.rich-text pre { overflow-x: auto; padding: 18px; border-radius: 12px; background: #191b29; color: #e6e8f2; }
+
+.ql-toolbar.ql-snow { border: 0 !important; border-bottom: 1px solid #e7e8ee !important; background: #fafafe; }
+.ql-container.ql-snow { border: 0 !important; }
+.ql-editor { min-height: 335px; font-family: "DM Sans", sans-serif; font-size: 14px; line-height: 1.8; }
+.ql-editor.ql-blank::before { color: #b1b4bf; font-style: normal; }
